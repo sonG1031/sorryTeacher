@@ -22,7 +22,7 @@ function isMobile() {
     return is_mobile;
 }
 function saveCnt() {
-    localStorage.setItem("count", cnt);
+    localStorage.setItem("count-t", cnt);
 }
 function codeDown() {
     audio.load();
@@ -68,7 +68,7 @@ if (isMobile()) {
     page.addEventListener("keyup", changeImgKeyup);
 }
 
-const savedCnt = localStorage.getItem("count");
+const savedCnt = localStorage.getItem("count-t");
 
 if (savedCnt !== null) {
     cntText.innerHTML = `+${savedCnt}`;
