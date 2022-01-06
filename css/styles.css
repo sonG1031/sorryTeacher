@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Song+Myung&display=swap");
+@import "reset.css";
+
+body {
+    margin: 0;
+    background-color: #2d3436;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 7rem;
+    margin-top: 30px;
+    font-family: "Song Myung", serif;
+    color: #b2bec3;
+    text-shadow: 0px 0px 10px black;
+}
+h1 {
+    font-weight: 900;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img {
+    width: 600px;
+}
+
+#cnt-num {
+    font-size: 4rem;
+    font-family: "Black Han Sans", sans-serif;
+    margin-top: 20px;
+}
+
+/* animation */
+@keyframes glow {
+    from {
+        text-shadow: 0px 0px 10px #fff3b6;
+    }
+    to {
+    }
+}
+@keyframes sparkle {
+    from {
+        color: #fff3b6;
+        text-shadow: 0px 0px 10px #f0932b;
+        transform: scale(1.5, 1.5);
+    }
+    to {
+    }
+}
+.active-num {
+    animation: sparkle 0.1s ease-in-out;
+}
+.active-title {
+    animation: glow 0.1s ease-in-out;
+}
+
+/* responsive */
+@media screen and (max-width: 810px) {
+    img {
+        width: 90vw;
+        height: 63vh;
+    }
+    header {
+        font-size: 13vw;
+    }
+    .cnt-num {
+        font-size: 10vw;
+    }
+}
+
+/* make Sexy screen */
+.no-drag {
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+.img-fix {
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
